@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: 365d87b1a55002f47af75bf8fb556f3b
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Max_Idle(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Max_Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 33.666718, y: 33.666718, z: 33.666718}
+    - name: Bone
+      parentName: Armature
+      position: {x: -0, y: 0, z: 0.00004070133}
+      rotation: {x: 0.7071068, y: -0.00000008429366, z: -0.000000084293674, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: IK_Depan.R
+      parentName: Bone
+      position: {x: -0.0024826676, y: 0.0012218679, z: -0.0042164214}
+      rotation: {x: -0.6902865, y: 0.023121485, z: -0.022080367, w: 0.72282946}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Telapak_Depan.R
+      parentName: IK_Depan.R
+      position: {x: 5.5879353e-11, y: -8.337889e-10, z: -2.9802322e-10}
+      rotation: {x: 0.5282255, y: 0.01664948, z: 0.012286156, w: -0.848852}
+      scale: {x: 1, y: 0.99999994, z: 1.0000002}
+    - name: IK_Belakang.R
+      parentName: Bone
+      position: {x: -0.0025076375, y: 0.00009883136, z: 0.008837889}
+      rotation: {x: -0.7071035, y: -0.0021462834, z: 0.0021464506, w: 0.7071036}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: IK_Depan.L
+      parentName: Bone
+      position: {x: 0.0024826655, y: 0.0012218679, z: -0.004216423}
+      rotation: {x: -0.6902865, y: -0.023121327, z: 0.022080515, w: 0.72282946}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Telapak_Depan.L
+      parentName: IK_Depan.L
+      position: {x: -7.916242e-11, y: -0.0000000010428262, z: -2.7939676e-10}
+      rotation: {x: 0.52822554, y: -0.016649468, z: -0.012286181, w: -0.848852}
+      scale: {x: 0.9999999, y: 1.0000005, z: 1.0000006}
+    - name: IK_Belakang.L
+      parentName: Bone
+      position: {x: 0.0025076414, y: 0.00009883136, z: 0.008837888}
+      rotation: {x: -0.7071035, y: 0.002146451, z: -0.0021462832, w: 0.7071036}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: IK_Badan
+      parentName: Bone
+      position: {x: 1.6867268e-18, y: 0.011837156, z: -4.02147e-25}
+      rotation: {x: -0, y: 0.00000011920924, z: -1.248727e-14, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: Bone.001
+      parentName: IK_Badan
+      position: {x: 3.998158e-12, y: -0.001766151, z: -0.0008201583}
+      rotation: {x: -0.8361233, y: -0.2308979, z: 0.33252925, w: 0.37014633}
+      scale: {x: 1, y: 1, z: 1.0000004}
+    - name: Bone.002
+      parentName: Bone.001
+      position: {x: -2.3869793e-16, y: 0.0037279343, z: 7.45058e-10}
+      rotation: {x: 0.13299437, y: 0.000000056532205, z: -0.000000007585855, w: 0.9911168}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Bone.003
+      parentName: Bone.002
+      position: {x: -4.3853807e-17, y: 0.0027791231, z: -5.9604643e-10}
+      rotation: {x: 0.059539918, y: -0, z: -8.881785e-16, w: 0.9982259}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: Bahu.R
+      parentName: Bone.001
+      position: {x: -0.002176817, y: 0.0025447875, z: -0.0012287736}
+      rotation: {x: 0.41081998, y: -0.15829405, z: -0.1694677, w: -0.8817316}
+      scale: {x: 1, y: 1.0000007, z: 1.0000001}
+    - name: Lengan_Atas.R
+      parentName: Bahu.R
+      position: {x: 1.3038516e-10, y: 0.0037524106, z: 2.9016517e-10}
+      rotation: {x: -0.4012879, y: 0.039161652, z: 0.13287885, w: 0.9054157}
+      scale: {x: 1, y: 1.0000008, z: 1.0000013}
+    - name: Lengan_Bawah.R
+      parentName: Lengan_Atas.R
+      position: {x: -3.5390257e-10, y: 0.0030038257, z: 1.11758706e-10}
+      rotation: {x: 0.51058996, y: 0.0021399613, z: 0.07884974, w: 0.85619867}
+      scale: {x: 0.9999997, y: 1.0000001, z: 1.0000007}
+    - name: Bahu.L
+      parentName: Bone.001
+      position: {x: 0.0021768168, y: 0.0025447875, z: -0.0012287741}
+      rotation: {x: 0.6475921, y: 0.026872585, z: 0.031647563, w: -0.7608553}
+      scale: {x: 1.0000002, y: 1.0000007, z: 0.99999994}
+    - name: Lengan_Atas.L
+      parentName: Bahu.L
+      position: {x: 1.11758706e-10, y: 0.0037524088, z: -6.772461e-10}
+      rotation: {x: -0.7019835, y: 0.0027231646, z: 0.07086889, w: 0.70865315}
+      scale: {x: 0.99999964, y: 0.9999998, z: 1}
+    - name: Lengan_Bawah.L
+      parentName: Lengan_Atas.L
+      position: {x: 1.862645e-10, y: 0.0030038266, z: 4.2375176e-10}
+      rotation: {x: 0.51058996, y: -0.0021399283, z: -0.07884973, w: 0.85619867}
+      scale: {x: 0.99999934, y: 1.0000006, z: 1.0000006}
+    - name: Bone.005
+      parentName: IK_Badan
+      position: {x: -2.04268e-17, y: -0.0022050126, z: 0.0012160765}
+      rotation: {x: 0.23204531, y: -0.0000006352594, z: -0.00000015154532, w: 0.972705}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: Bone.006
+      parentName: Bone.005
+      position: {x: 1.5694437e-16, y: 0.002849828, z: -2.9802322e-10}
+      rotation: {x: 0.0053882296, y: 0.000000025252117, z: -0.000000006901984, w: 0.99998546}
+      scale: {x: 1, y: 1.0000006, z: 1.0000005}
+    - name: Bone.007
+      parentName: Bone.006
+      position: {x: -4.6629365e-16, y: 0.0046586283, z: -3.911554e-10}
+      rotation: {x: 0.4052538, y: 0.000000029059755, z: -0.0000004959814, w: 0.91420424}
+      scale: {x: 1, y: 1.0000008, z: 0.9999998}
+    - name: Bone.008
+      parentName: Bone.007
+      position: {x: -1.7462298e-12, y: 0.0026645034, z: 0.0000000015059832}
+      rotation: {x: -0.13396186, y: 3.8369308e-13, z: 0.00000015969661, w: 0.9909865}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Bone.009
+      parentName: Bone.008
+      position: {x: -5.820766e-13, y: 0.0024747015, z: -5.8017535e-10}
+      rotation: {x: -0.13234481, y: -4.3461105e-14, z: 0.00000015776509, w: 0.9912037}
+      scale: {x: 0.9999999, y: 1.0000011, z: 1.0000008}
+    - name: Paha.R
+      parentName: Bone.006
+      position: {x: -0.0022240777, y: 0.0034415978, z: 0.0011391476}
+      rotation: {x: 0.62585336, y: 0.47591043, z: -0.37401956, w: 0.49186003}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: Betis.R
+      parentName: Paha.R
+      position: {x: 3.8147846e-10, y: 0.004716891, z: -9.947689e-10}
+      rotation: {x: -0.023395807, y: -0.05184935, z: -0.12963493, w: 0.98992884}
+      scale: {x: 1, y: 1.0000015, z: 1.0000008}
+    - name: Telapak_Belakang.R
+      parentName: Betis.R
+      position: {x: -8.381903e-11, y: 0.0038863209, z: 5.9837474e-10}
+      rotation: {x: 0.46258622, y: -0.016367542, z: -0.037512343, w: 0.8856292}
+      scale: {x: 0.9999999, y: 1.0000017, z: 1.0000002}
+    - name: Paha.L
+      parentName: Bone.006
+      position: {x: 0.0022240807, y: 0.0034415978, z: 0.0011391408}
+      rotation: {x: 0.6258537, y: -0.4759099, z: 0.37401873, w: 0.49186066}
+      scale: {x: 1, y: 0.9999995, z: 0.9999999}
+    - name: Betis.L
+      parentName: Paha.L
+      position: {x: 3.943569e-11, y: 0.00471689, z: -0.0000000010483563}
+      rotation: {x: -0.0233956, y: 0.051849566, z: 0.1296345, w: 0.9899289}
+      scale: {x: 1, y: 1.0000017, z: 1.0000008}
+    - name: Telapak_Belakang.L
+      parentName: Betis.L
+      position: {x: -4.842877e-10, y: 0.0038863218, z: 0.0000000011594966}
+      rotation: {x: 0.4625862, y: 0.016367547, z: 0.03751233, w: 0.8856291}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.99999887}
+    - name: IK_Kepala
+      parentName: IK_Badan
+      position: {x: 1.06960535e-16, y: 0.0038401398, z: -0.0078017935}
+      rotation: {x: 2.0546724e-22, y: -7.1054274e-15, z: -1.7235841e-15, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Bone.004
+      parentName: IK_Kepala
+      position: {x: -5.504709e-26, y: -3.7252902e-11, z: -2.9802322e-10}
+      rotation: {x: -0.83260965, y: 9.605769e-15, z: -4.2397885e-16, w: 0.5538603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ik_Ekor
+      parentName: IK_Badan
+      position: {x: -0.0000017208088, y: -0.0044580684, z: 0.01481744}
+      rotation: {x: -8.2186775e-22, y: -0.00000059604633, z: 6.933069e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: Max_Idle(Clone)
+      position: {x: 7.4319705e-18, y: 0.295, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Harness
+      parentName: Max_Idle(Clone)
+      position: {x: 7.4319705e-18, y: 0.295, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

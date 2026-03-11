@@ -8,6 +8,8 @@ public class MayaFollow : MonoBehaviour
     public float DP = 2.5f;
     public float speed = 2f;
 
+    Animator anim;
+
     enum State
     {
         Walk,
@@ -15,6 +17,11 @@ public class MayaFollow : MonoBehaviour
     }
 
     State currentState = State.Stop;
+
+    void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     void Update()
     {
@@ -25,6 +32,7 @@ public class MayaFollow : MonoBehaviour
             if(distance < DN)
             {
                 currentState = State.Stop;
+                anim.SetBool("isWalking", false);
             }
             else
             {
@@ -37,6 +45,7 @@ public class MayaFollow : MonoBehaviour
             if(distance > DP)
             {
                 currentState = State.Walk;
+                anim.SetBool("isWalking", true);
             }
         }
     }
@@ -44,7 +53,6 @@ public class MayaFollow : MonoBehaviour
     void MoveToPlayer()
     {
         Vector3 target = player.position;
-
         target.y = transform.position.y;
 
         transform.position = Vector3.MoveTowards(
@@ -54,10 +62,5 @@ public class MayaFollow : MonoBehaviour
         );
 
         transform.LookAt(player);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        currentState = State.Stop;
     }
 }
