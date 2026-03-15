@@ -53,14 +53,21 @@ public class MayaFollow : MonoBehaviour
     void MoveToPlayer()
     {
         Vector3 target = player.position;
-        target.y = transform.position.y;
+        target.y = transform.position.y; // Keep her on the ground
 
+        // 1. Move smoothly
         transform.position = Vector3.MoveTowards(
             transform.position,
             target,
             speed * Time.deltaTime
         );
 
-        transform.LookAt(player);
+        // 2. Rotate smoothly instead of snapping with LookAt
+        Vector3 direction = (target - transform.position).normalized;
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5f * Time.deltaTime);
+        }
     }
 }
