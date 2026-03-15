@@ -21,6 +21,6 @@ public class CutsceneTrigger : MonoBehaviour
 
         yield return new WaitForSeconds(cutsceneTime);
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
 }
