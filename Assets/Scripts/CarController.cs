@@ -10,8 +10,19 @@ public class CarController : MonoBehaviour
     int index = 0;
     bool stop = false;
 
+    [Header("Horn Sound")]
+    public AudioSource hornSource;
+    public AudioClip hornClip;
+
+    bool hornPlaying = false;
+
     void Start()
     {
+        if (hornSource != null)
+        {
+            hornSource.clip = hornClip;
+        }
+
         if (waypoints != null && waypoints.Length > 0)
         {
             Vector3 dir = waypoints[0].position - transform.position;
@@ -29,13 +40,11 @@ public class CarController : MonoBehaviour
 
         Transform target = waypoints[index];
 
-        // Gerak menuju waypoint
         transform.position = Vector3.MoveTowards(
             transform.position,
             target.position,
             speed * Time.deltaTime);
 
-        // arah menuju waypoint
         Vector3 direction = target.position - transform.position;
         direction.y = 0f;
 
@@ -52,7 +61,6 @@ public class CarController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, rot.y, 0);
         }
 
-        // cek waypoint
         if (Vector3.Distance(transform.position, target.position) < 0.3f)
         {
             index++;
@@ -67,10 +75,30 @@ public class CarController : MonoBehaviour
     public void StopCar()
     {
         stop = true;
+        PlayHorn();
     }
 
     public void ResumeCar()
     {
         stop = false;
+        StopHorn();
+    }
+
+    void PlayHorn()
+    {
+        if (hornSource != null && !hornPlaying)
+        {
+            hornSource.Play();
+            hornPlaying = true;
+        }
+    }
+
+    void StopHorn()
+    {
+        if (hornSource != null && hornPlaying)
+        {
+            hornSource.Stop();
+            hornPlaying = false;
+        }
     }
 }
