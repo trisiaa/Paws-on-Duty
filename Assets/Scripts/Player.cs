@@ -39,13 +39,14 @@ public class Player : MonoBehaviour
     {
         if (inHandItem != null)
         {
-            inHandItem.transform.SetParent(null);
-            inHandItem = null;
-            Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+            Rigidbody rb = inHandItem.GetComponent<Rigidbody>(); // Use the item reference, not the raycast hit
             if (rb != null)
             {
                 rb.isKinematic = false;
             }
+
+            inHandItem.transform.SetParent(null);
+            inHandItem = null;
         }
     }
 
@@ -53,20 +54,24 @@ public class Player : MonoBehaviour
     {
         if(hit.collider != null && inHandItem == null)
         {
-            Debug.Log(hit.collider.name);
-            Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
             if (hit.collider.GetComponent<Item>())
             {
-                Debug.Log("It's an item");
                 inHandItem = hit.collider.gameObject;
+
+                // 1. Set the Parent FIRST
+                // Passing 'false' for worldPositionStays is a cleaner way to reset coordinates
+                inHandItem.transform.SetParent(pickUpParent, false); 
+
+                // 2. Explicitly reset (Optional if using SetParent(parent, false))
                 inHandItem.transform.localPosition = Vector3.zero;
                 inHandItem.transform.localRotation = Quaternion.identity;
-                inHandItem.transform.SetParent(pickUpParent.transform, true);
+
+                // Handle Rigidbody
+                Rigidbody rb = inHandItem.GetComponent<Rigidbody>();
                 if (rb != null)
                 {
                     rb.isKinematic = true;
                 }
-                return;
             }
         }
     }

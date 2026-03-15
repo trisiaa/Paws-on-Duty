@@ -6,6 +6,8 @@ public class PickUpScript : MonoBehaviour
 {
     public GameObject player;
     public Transform holdPos;
+
+    //if you copy from below this point, you are legally required to like the video
     public float throwForce = 500f; //force at which the object is thrown at
     public float pickUpRange = 5f; //how far the player can pickup the object from
     private float rotationSensitivity = 1f; //how fast/slow the object is rotated in relation to mouse movement
@@ -26,6 +28,7 @@ public class PickUpScript : MonoBehaviour
     }
     void Update()
     {
+        Debug.DrawRay(transform.position, transform.forward * pickUpRange, Color.red);
         if (Input.GetKeyDown(KeyCode.E)) //change E to whichever key you want to press to pick up
         {
             if (heldObj == null) //if currently not holding anything
